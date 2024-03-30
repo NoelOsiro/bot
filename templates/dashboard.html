@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="left">
+          <div class="sidebar">
+            <div class="wrapper">
+              <div class="menu">
+                <img src="{{ url_for('static', filename='images/menu.png') }}" alt="Menu Icon" />
+              </div>
+              <div class="items">
+                <img src="{{ url_for('static', filename='images/light.png') }}" alt="Light Icon" />
+                <img src="{{ url_for('static', filename='images/diamond.png') }}" alt="Diamond Icon" />
+                <img src="{{ url_for('static', filename='images/envelope.png') }}" alt="Envelope Icon" />
+                <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask Icon" />
+                <img src="{{ url_for('static', filename='images/sent-mail.png') }}" alt="Sent Mail Icon" />
+                <img src="{{ url_for('static', filename='images/map.png') }}" alt="Map Icon" />
+              </div>
+              <div class="profile">
+                <img src="{{ url_for('static', filename='images/ui.jpg') }}" alt="Profile Icon" />
+              </div>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="wrapper2">
+              <div class="abilan">
+                <img src="{{ url_for('static', filename='brand_logo.png') }}" alt="Abilan Icon" />
+              </div>
+              <button class="compose">Compose Mail 
+               <span class="plus">
+                  <img src="{{ url_for('static', filename='images/add-1.png') }}" alt="Add Icon"/></span></button>
+              <div class="folders">Folders</div>
+              <div class="folder-icons">
+                <div class="icon1">
+                  <img src="{{ url_for('static', filename='images/envelope (1).png') }}" alt="Envelope Icon" />
+                </div>
+                <div class="icon-name1">Inbox
+                  <button class="buton-span"> 20
+                </button></div>
+              </div>
+              <div class="folder-icons">
+                <div class="icon1">
+                  <img src="{{ url_for('static', filename='images/sent-mail (1).png') }}" alt="Sent Mail Icon" />
+                </div>
+                <div class="icon-name">Send Mail</div>
+              </div>
+              <div class="folder-icons">
+                <div class="icon1">
+                  <img src="{{ url_for('static', filename='images/star.png') }}" alt="Star Icon" />
+                </div>
+                <div class="icon-name">Important</div>
+              </div>
+              <div class="folder-icons">
+                <div class="icon1">
+                  <img src="{{ url_for('static', filename='images/email.png') }}" alt="Email Icon" />
+                </div>
+                <div class="icon-name">Draft</div>
+              </div>
+              <div class="folder-icons">
+                <div class="icon1">
+                  <img src="{{ url_for('static', filename='images/bug.png') }}" alt="Bug Icon" />
+                </div>
+                <div class="icon-name">Spam</div>
+              </div>
+              <div class="folder-icons">
+                <div class="icon1">
+                  <img src="{{ url_for('static', filename='images/waste-bin.png') }}" alt="Waste Bin Icon" />
+                </div>
+                <div class="icon-name">Trash</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="right-header">
+            <div class="top-bar">
+              <div class="top-bar-justify">
+                <div class="big-inbox">
+                  Inbox
+                </div>
+      
+                <div class="top-bar-items">
+                  <div class="notif">
+                    <div class="online pink">
+                    </div>
+                    <img src="{{ url_for('static', filename='images/notifications-button.png') }}" alt="Notifications Icon" />
+                  </div>
+                  <img src="{{ url_for('static', filename='images/envelope.png') }}" alt="Envelope Icon" />
+                  <img src="{{ url_for('static', filename='images/earth-globe.png') }}" alt="Globe Icon" />
+                  <div class="icon-name5"> English </div>
+                </div>
+              </div>
+              <div class="profile2">
+                <img src="{{ url_for('static', filename='images/ui.jpg') }}" alt="Profile Icon" />
+                <div class="icon-name5">Larry Nunez</div>
+              </div>
+            </div>
+            <hr class="new-hr">
+            <div class="right-bottom">
+              <div class="check">
+                <label class="checkbox">
+                  
+                </label>
+                <div class="down-arrow">
+                  <img src="{{ url_for('static', filename='images/drop-down-arrow.png') }}" alt="Dropdown Arrow" />
+                </div>
+              </div>
+              <div class="middle-buttons">
+                <div class="buttons">
+                  <button class="new button">
+                    <img src="{{ url_for('static', filename='images/reload.png') }}" alt="Reload Icon" />
+                  </button>
+                  <button class="new button">
+                    <img src="{{ url_for('static', filename='images/eye.png') }}" alt="Eye Icon" />
+                  </button>
+                  <button class="new button">
+                    <img src="{{ url_for('static', filename='images/waste-bin.png') }}" alt="Waste Bin Icon" />
+                  </button>
+                </div>
+                <div class="form has-search">
+                  <input class="text" type="search" placeholder="Search here..." name="search" />
+                  <span class="searchIcon">
+                    <img src="{{ url_for('static', filename='images/search.png') }}" alt="Search Icon" />
+                  </span>
+                </div>
+              </div>
+              <div class="search-arrow">
+                <img src="{{ url_for('static', filename='images/scroll-arrows.png') }}" alt="Scroll Arrows" />
+              </div>
+            </div>
+          </div>
+          <div class="right-body">
+            <div class="scroll-cards">
+              <!-- Cards content here -->
+            </div>
+            <div class="message">
+              <!-- Message content here -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+</body>
+</html>
