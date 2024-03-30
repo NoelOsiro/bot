@@ -15,6 +15,11 @@
     height: 100%;
     display: flex;
   }
+  .left + a.folder-icons {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
   .sidebar {
     width: 80px;
     height: 100%;
@@ -87,16 +92,26 @@
     font-size: 14px;
   }
   .folder-icons {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
+    padding:10px;
     align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
   }
+  .folder-icons:hover {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  }
+  
   
   .icon-name1 {
     margin-left: 10px;
+    font: semi-bold;
     color: #8b47a9;
   }
-  
+  .icon-name1:hover {
+    color: white;
+}
   .icon-name {
     margin-left: 10px;
     color: grey;
@@ -487,5 +502,34 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .responsive-table caption {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .responsive-table thead th {
+    background-color: #f2f2f2;
+  }
+  
+  .responsive-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .responsive-table tfoot td {
+    background-color: #f2f2f2;
+    font-style: italic;
   }
   

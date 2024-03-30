@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, jsonify, url_for
 from flask_jwt_extended import create_access_token
-
+from folders_data import folders, icons
 from app import app
 from models import User, db
 
@@ -54,4 +54,8 @@ def login():
 
 @app.route('/dashboard', methods=["GET"])
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('dashboard.html', folders=folders, icons=icons)
+
+@app.route('/data', methods=["GET"])
+def data():
+    return render_template('data.html', folders=folders, icons=icons)

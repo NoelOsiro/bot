@@ -1,70 +1,40 @@
 <div class="left">
     <div class="sidebar">
         <div class="wrapper">
-          <div class="menu">
-            <img src="{{ url_for('static', filename='images/menu.png') }}" alt="Menu Icon" />
-          </div>
-          <div class="items">
-            <img src="{{ url_for('static', filename='images/light.png') }}" alt="Light Icon" />
-            <img src="{{ url_for('static', filename='images/diamond.png') }}" alt="Diamond Icon" />
-            <img src="{{ url_for('static', filename='images/envelope.png') }}" alt="Envelope Icon" />
-            <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask Icon" />
-            <img src="{{ url_for('static', filename='images/sent-mail.png') }}" alt="Sent Mail Icon" />
-            <img src="{{ url_for('static', filename='images/map.png') }}" alt="Map Icon" />
-          </div>
-          <div class="profile">
-            <img src="{{ url_for('static', filename='images/ui.jpg') }}" alt="Profile Icon" />
-          </div>
+            <div class="menu">
+                <img src="{{ url_for('static', filename='images/menu.png') }}" alt="Menu Icon" />
+            </div>
+            <div class="items">
+                {% for icon in icons %}
+                <img src="{{ url_for('static', filename='images/' + icon.filename) }}" alt="{{ icon.alt }}" />
+                {% endfor %}
+            </div>
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/ui.jpg') }}" alt="Profile Icon" />
+            </div>
         </div>
-      </div>
-      <div class="navigation">
+    </div>
+    <div class="navigation">
         <div class="wrapper2">
-          <div class="abilan">
-            <img src="{{ url_for('static', filename='brand_logo.png') }}" alt="Abilan Icon" />
-          </div>
-          <button class="compose">Analysis
-           <span class="plus">
-              <img src="{{ url_for('static', filename='images/add-1.png') }}" alt="Add Icon"/></span></button>
-          <div class="folders">Menu</div>
-          <div class="folder-icons">
-            <div class="icon1">
-              <img src="{{ url_for('static', filename='images/envelope (1).png') }}" alt="Envelope Icon" />
+            <div class="abilan">
+                <img src="{{ url_for('static', filename='brand_logo.png') }}" alt="Abilan Icon" />
             </div>
-            <div class="icon-name1">Logs
-              <button class="buton-span"> 20
-            </button></div>
-          </div>
-          <div class="folder-icons">
-            <div class="icon1">
-              <img src="{{ url_for('static', filename='images/sent-mail (1).png') }}" alt="Sent Mail Icon" />
-            </div>
-            <div class="icon-name">Sent Posts</div>
-          </div>
-          <div class="folder-icons">
-            <div class="icon1">
-              <img src="{{ url_for('static', filename='images/star.png') }}" alt="Star Icon" />
-            </div>
-            <div class="icon-name">Important</div>
-          </div>
-          <div class="folder-icons">
-            <div class="icon1">
-              <img src="{{ url_for('static', filename='images/email.png') }}" alt="Email Icon" />
-            </div>
-            <div class="icon-name">Failed</div>
-          </div>
-          <div class="folder-icons">
-            <div class="icon1">
-              <img src="{{ url_for('static', filename='images/bug.png') }}" alt="Bug Icon" />
-            </div>
-            <div class="icon-name">Data</div>
-          </div>
-          <div class="folder-icons">
-            <div class="icon1">
-              <img src="{{ url_for('static', filename='images/waste-bin.png') }}" alt="Waste Bin Icon" />
-            </div>
-            <div class="icon-name">Trash</div>
-          </div>
+            <button class="compose">{{ compose_text }}
+                <span class="plus">
+                    <img src="{{ url_for('static', filename='images/add-1.png') }}" alt="Add Icon" />
+                </span>
+                Tweet Deck
+            </button>
+            <div class="folders">{{ folders_text }}</div>
+            {% for key, folder in folders.items() %}
+            <a href="{{ folder.url }}" class="folder-icons" title="side-link">
+                <div class="icon1">
+                    <img src="{{ url_for('static', filename='images/' + folder.icon) }}" alt="{{ folder.alt }}" />
+                </div>
+                <div class="icon-name1">{{ folder.name }}
+                </div>
+            </a>
+            {% endfor %}
         </div>
-      </div>
-  </div>
-  
+    </div>
+</div>

@@ -3,14 +3,8 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<div class="dashboard">
-  {% include 'sidebar.html' %}
-  <div class="right-side">
-    {% include 'header.html' %}
-    <div class="right-body">
-      {% include 'cards.html' %}
-      {% include 'message.html' %}
-    </div>
-  </div>
-</div>
+
+{% include 'cards.html' %}
+{% include 'message.html' %}
+
 {% endblock %}
