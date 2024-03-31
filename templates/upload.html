@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Data{% endblock %}
+{% block content %}
+<h1>Upload Data</h1>
+{% if success %}
+<div class="alert alert-success" role="alert">
+    {{ success }}
+</div>
+{% endif %}
+{% if error %}
+<div class="alert alert-danger" role="alert">
+    {{ error }}
+</div>
+{% endif %}
+<form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+    <label for="data_file">Select JSON File:</label>
+    <input type="file" id="data_file" name="data_file" accept=".json" required>
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}

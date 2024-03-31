@@ -1,0 +1,15 @@
+[
+    {
+        "id": "2",
+        "title": "Where does Kenya get its energy?",
+        "text": "Kenya generates its energy from a mix of sources, including renewable and non-renewable sources. Some of these energy sources are used directly while most are transformed into fuels or electricity for final consumption.",
+        "image_url": [
+            "https://source.unsplash.com/random/1/?malindi",
+            "https://source.unsplash.com/random/1/?mombasa",
+            "https://source.unsplash.com/random/1/?nairobi"
+
+        ],
+        "null": null
+    }
+    
+]
